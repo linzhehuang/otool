@@ -1,0 +1,67 @@
+#idLoginForm {
+	position: absolute;
+	margin: auto;
+	width: 360px;
+	height: 240px;
+	display: block;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+#idPasswordInput {
+	border: none;
+    outline: none;
+    
+    display: block;
+	padding: 0 8px;
+	height: 34px;
+	width: 160px;
+	font-size: 14px;
+	line-height: 34px;
+	border-bottom: 2px solid #bfbfbf;
+	color: #333333;
+	
+	position: absolute;
+	font-size: 16px;
+	font-weight: 700;
+	width: 240px;
+	margin: auto;
+	top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#idLoginButton {
+	position: absolute;
+	margin: auto;
+	top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    box-shadow: 0 2px 4px #5352edd0;
+}
+#idLoginButton[disabled] {
+	background-color: #5352edd0;
+	color: #ffffffaa;
+	box-shadow: none;
+}
+#idHint {
+	position: absolute;
+	display: none;
+	cursor: pointer;
+	font-size: 14px;
+	color: #ee4444;
+	text-align: center;
+	font-weight: 600;
+	width: 240px;
+	height: 34px;
+	margin: auto;
+	top: -120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

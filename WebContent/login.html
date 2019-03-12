@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/style.css" type="text/css" />
+<link rel="stylesheet" href="./css/login.css" type="text/css" />
+<script src="./js/base.js" defer></script>
+<script src="./js/login.js" defer></script>
+</head>
+<body>
+<div class="--shadow-light" id="idLoginForm">
+	<div id="idHint">您输入的密码有误！</div>
+	<input class="--widget-input"
+	       id="idPasswordInput"
+	       type="password"
+	       placeholder="数据库管理员密码"
+	       onmousemove="(this.value=='')?idLoginButton.setAttribute('disabled',''):idLoginButton.removeAttribute('disabled');"
+	       onblur="(this.value=='')?idLoginButton.setAttribute('disabled',''):idLoginButton.removeAttribute('disabled');" 
+	       onchange="(this.value=='')?idLoginButton.setAttribute('disabled',''):idLoginButton.removeAttribute('disabled');" />
+	<br/>
+	<input class="--color-white --bgcolor-coral --widget-button noselect"
+	       type="button"
+	       id="idLoginButton"
+	       value="现在登录"
+	       onclick="login();"
+	       disabled />
+</div>
+</body>
+</html>

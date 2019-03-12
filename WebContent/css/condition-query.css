@@ -1,0 +1,255 @@
+#mainPanel {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: none;
+  width: 1260px;
+  height: 740px;
+}
+#columnPanel {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 220px;
+  top: 0;
+  left: 0;
+}
+#columnPanel * {
+  width: 160px;
+  padding: auto;
+  margin: 12px 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#selectedColumnNameCover {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 220px;
+  top: 0;
+  left: 230px;
+	background-color: #ffffff;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#selectedColumnName {
+  position: absolute;
+	width: 235px;
+	height: 220px;
+	margin: auto;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	text-align: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#selectedColumnName span {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+}
+
+#conditionPanel {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 320px;
+  top: 230px;
+  left: 0;
+}
+#conditionPanel * {
+  width: 160px;
+  padding: auto;
+  margin: 12px 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#conditionListCover {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 320px;
+  top: 230px;
+  left: 230px;
+	background-color: #ffffff;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#conditionList {
+  position: absolute;
+	width: 235px;
+	height: 320px;
+	margin: auto;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	text-align: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#conjunctionPanel {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 120px;
+  top: 560px;
+  left: 0;
+}
+#conjunctionPanel * {
+  width: 160px;
+  padding: auto;
+  margin: 12px 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#conjunctionListCover {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 120px;
+  top: 560px;
+  left: 230px;
+	background-color: #ffffff;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#conjunctionList {
+  position: absolute;
+	width: 235px;
+	height: 120px;
+	margin: auto;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	text-align: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#queryButtonPanel {
+  position: absolute;
+  text-align: center;
+  width: 450px;
+  height: 50px;
+  line-height: 50px;
+  top: 690px;
+  left: 0;
+}
+#queryButtonPanel input {
+  width: 140px;
+  padding: 0 16px;
+  margin: 0 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#tableContentCover {
+  position: absolute;
+  text-align: center;
+  width: 800px;
+  height: 510px;
+  line-height: 50px;
+  top: 230px;
+  left: 460px;
+}
+#tableContent {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 800px;
+  height: 510px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: none;
+}
+#tableContent p {
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+}
+#tableContent span {
+  display: inline-block;
+  width: 180px;
+  height: 32px;
+  line-height: 32px;
+  text-align: left;
+  margin: 0;
+}
+#tableContent p .tableHeader:first-child {
+  border-left: 1px solid #5352ed;
+}
+#tableContent .tableHeader {
+  background-color: #5352ed;
+  border-right: 1px solid #5352ed;
+  color: white;
+}
+#tableContent p  .tableCell:first-child {
+  border-left: 1px solid #cecece;
+}
+#tableContent .tableCell {
+  background-color: #ecf0f6;
+  color: #909090;
+  border-bottom: 1px solid #cecece;
+  border-right: 1px solid #cecece;
+}
+#tableContent:first-child {
+  margin-top: 10px;
+}
+
+#tableRelation {
+  position: absolute;
+  text-align: center;
+  width: 800px;
+  height: 220px;
+  line-height: 50px;
+  top: 0px;
+  left: 460px;
+}
+
+#tableRelationContent {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  height: 220px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#tableRelationContent span {
+  display: block;
+  width: 400px;
+  height: 28px;
+  background-color: #ecf0f6;
+  line-height: 28px;
+  color: #909090;
+  border-bottom: 1px solid #cecece;
+}
+#tableRelationContent span:first-child {
+  background-color: #5352ed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+}

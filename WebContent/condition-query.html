@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>condition-query</title>
+<link rel="stylesheet" href="./css/style.css" type="text/css" />
+<link rel="stylesheet" href="./css/condition-query.css" type="text/css" />
+<script src="./js/base.js" defer></script>
+<script src="./js/condition-query.js" defer></script>
+</head>
+<body>
+  <div id="mainPanel">
+    <div id="columnPanel" class="--shadow-light" >
+      <select id="userNameSelect" onchange="changeTableName();">
+        <option value="0">用户名</option>
+      </select>
+      <select id="tableNameSelect" onchange="changeColumnName();" >
+        <option value="0">表格名</option>
+      </select>
+      <select id="columnNameSelect" >
+        <option value="0">列名</option>
+      </select>
+      <input type="button" value="添加" onclick="addColumnName();" />
+    </div>
+    <div id="selectedColumnNameCover" class="--shadow-light">
+      <div id="selectedColumnName"></div>
+    </div>
+
+    <div id="conditionPanel" class="--shadow-light" >
+      <select id="conditionTypeSelect" onchange="changeArgListBox();">
+        <option value="0">条件类型</option>
+      </select>
+      <select id="notSelect">
+        <option value="0">是否取NOT</option>
+      </select>
+      <select id="allColumnNameSelect">
+        <option value="0">列名</option>
+      </select>
+      <span id="argListBox"></span>
+      <input type="button" value="添加" onclick="addCondition();" />
+    </div>
+    <div id="conditionListCover">
+      <div id="conditionList"></div>
+    </div>
+
+    <div id="conjunctionPanel" class="--shadow-light">
+      <select id="conjunctionSelect">
+        <option value="0">连接词</option>
+      </select>
+      <input id="addConjunctionBtn" type="button" value="添加" onclick="addConjunction();" />
+    </div>
+    <div id="conjunctionListCover" class="--shadow-light">
+      <div id="conjunctionList"></div>
+    </div>
+
+    <div id="queryButtonPanel">
+      <input type="button" value="参数化查询" onclick="query();" />
+      <input type="button" value="单表查询" onclick="tableQuery();" />
+    </div>
+
+    <div id="tableRelation" class="--shadow-light">
+      <div id="tableRelationContent">
+        <span>table_name</span>
+        <span>columnName--->tabe.column</span>
+        <span>columnName--->tabe.column</span>
+      </div>
+    </div>
+
+    <div id="tableContentCover" class="--shadow-light">
+      <div id="tableContent"></div>
+    </div>
+  </div>
+</body>
+</html>

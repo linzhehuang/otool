@@ -1,0 +1,205 @@
+# 这是一份用于前后台通信的json格式模板文件。
+# 历史：
+#   linzhehuang 创建于 2018/05/20
+#   linzhehuang 修改于 2018/05/22
+#   linzhehuang 修改于 2018/05/24
+#   linzhehuang 修改与 2018/06/11
+
+# 规范及说明：
+#   1.键值命名一律使用单数。
+#   2.键值命名时，集合（set）为对象数组，列表（list）为基本值数组。
+#   3.集合书写时换行，而列表不换行。
+#   4.为了书写简略，用“<代替名称>”代替整个json格式。
+#   5.每个json格式前的注释格式为“中文说明 <代替名称>”。
+#   6.json格式中的注释为//开头，记住在编写代码时删除其中的注释。
+
+# 用户名列表 <userNameList>
+{
+  "userNameList" : ["user1", "user2"]
+}
+# 表格名列表 <tableNameList>
+{
+  "tableNameList": ["table1", "table2"]
+}
+# 列名列表 <columnNameList>
+{
+  "columnNameList": ["column1", "column2"]
+}
+
+# 表格集合 <tableSet>
+{
+  "tableSet" : [
+    {
+      "tableName": "table",
+      "columnNameList" : ["column1", "column2"],
+    },
+    {
+      "tableName": "table",
+      "columnNameList" : ["column1", "column2"],
+    }
+  ]
+}
+
+# 表间关系 <tableRelation>
+{
+  "table"
+}
+
+# 表格信息 <tableInformation>
+{
+  "columnSet" : [
+    {
+      "columnName" : "cloumn",
+      "columnValueList" : ["value1" , "value2"]
+    },
+    {
+      "columnName" : "cloumn",
+      "columnValueList" : ["value1" , "value2"]
+    }
+  ]
+}
+
+# 查询结果 <queryResult>
+{
+  "columnSet" : [
+    {
+      "columnName" : "table.cloumn",
+      "columnValueList" : ["value1" , "value2"]
+    },
+    {
+      "columnName" : "table.cloumn",
+      "columnValueList" : ["value1" , "value2"]
+    }
+  ]
+}
+
+# SQL查询语句 <queryStatement>
+{
+  "userName" : "user",
+  "tableNameList" : ["table", "table"],
+  "columnNameList" : ["table.column", "table.column"],
+  "whereClause" : {
+    "conjunctionList" : ["AND", "OR"], // 连接词列表，取值为 AND-和，OR-或
+    "conditionSet" : [
+      <condition>
+    ]
+  }
+}
+
+# SQL查询语句-条件 <condition>
+{
+  "conditionType" : 1,  // 条件类型：数据比较
+  "not" : false,  // 是否取NOT
+  "columnName" : "table.column", // 表格列名
+  "argList" : [
+    "=",  // 比较符，取值为 =，>，<，>=，<=，!=，<>，!>，!<
+    "10"  // 比较值
+  ]
+}
+{
+  "conditionType" : 2,  // 条件类型：确定范围
+  "not" : false,  // 是否取NOT
+  "columnName" : "table.column", // 表格列名
+  "argList" : [
+    "10",  // 下限值
+    "20"  // 上限值
+  ]
+}
+{
+  "conditionType" : 3,  // 条件类型：字符匹配
+  "not" : false,  // 是否取NOT
+  "columnName" : "table.column", // 表格列名
+  "argList" : [
+    "matchValue"  // 匹配值
+  ]
+}
+{
+  "conditionType" : 4,  // 条件类型：空值比较
+  "not" : false,  // 是否取NOT
+  "columnName" : "table.column", // 表格列名
+  "argList" : [] // 无参数
+}
+{
+  "conditionType" : 5,  // 条件类型：多表连接
+  "not" : false,  // 是否取NOT
+  "columnName" : "table.column", // 表格列名
+  "argList" : [
+    "table.column" // 表格名
+  ]
+}
+
+# 表格修改 <tableRefactor>
+{
+  "tableName" : "user.table",
+  "columnSet" : [
+    {
+      "columnName" : "column",
+      "columnValue" : "value"
+    }
+  ],
+  "data" : {
+    "columnName" : "column",
+    "columnValue" : "value"
+  }
+}
+# 表格修改 <tableRefactor>
+{
+  "refactorType" : 1,  // 修改类型：修改
+  "columnSet" : [
+    {
+      "columnName" : "column1",
+      "columnValue" : "column2Value"
+    } ,
+    {
+      "columnName" : "column2",
+      "columnValue" : "column2Value"
+    }
+  ],
+  "dataSet" : [
+    {
+      "columnName" : "column1",
+      "columnValue" : "column2Value"
+    } ,
+    {
+      "columnName" : "column2",
+      "columnValue" : "column2Value"
+    }
+  ]
+}
+{
+  "refactorType" : 2,  // 修改类型：删除
+  "columnSet" : [
+    {
+      "columnName" : "column1",
+      "columnValue" : "column2Value"
+    } ,
+    {
+      "columnName" : "column2",
+      "columnValue" : "column2Value"
+    }
+  ],
+  "dataSet" : null
+}
+{
+  "refactorType" : 3,  // 修改类型：增加
+  "columnSet" : null,
+  "dataSet" : [
+    {
+      "columnName" : "column1",
+      "columnValue" : "column2Value"
+    } ,
+    {
+      "columnName" : "column2",
+      "columnValue" : "column2Value"
+    }
+  ]
+}
+
+# 表格修改结果 <tableRefactorResult>
+{
+  "success" : true
+}
+# 备份信息 <backupInformation>
+{
+  "backupPath" : "/home/lin/backup_demo/"
+}
